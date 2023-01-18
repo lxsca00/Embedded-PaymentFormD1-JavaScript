@@ -76,7 +76,7 @@ controller.ipn =  (req,res)=> {
   console.log(answerHash);
   console.log(hash);
 
-  if (hash === answerHash)
+  if ('hash' === answerHash)
   res.status(200).send({'response' : answer.orderStatus })
   else res.status(500).send( {'response' : 'Error catastrófico, puede estar teniendo un intento de fraude'})
 
