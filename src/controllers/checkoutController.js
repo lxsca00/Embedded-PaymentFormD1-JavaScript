@@ -41,7 +41,7 @@ controller.checkout = (req, res,next) => {
     }
     else
     {
-      console.error(body);
+      //console.error(body);
       res.status(500).send('error');
     }  
   })
@@ -102,7 +102,7 @@ controller.apiCheckout = (req,res,next) => {
     }
     else
     {
-      console.error(body);
+      //console.error(body);
       res.status(500).send('error');
     }  
   })
