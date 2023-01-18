@@ -59,14 +59,14 @@ controller.paid =  (req,res)=> {
   )
     orderDetails = answer.orderDetails
 
-  if ('hash' === answerHash)
+  if (hash === answerHash)
    res.status(200).render('paid', {'response' : answer.orderStatus , 'details':orderDetails} )
   else res.status(500).render('paid', {'response' : 'Error catastrófico'})
 }
 
 //IPN ========================================================================//
 controller.ipn =  (req,res)=> {
-
+  console.log(req.body)
   const answer = JSON.parse(req.body["kr-answer"])
   const hash = req.body["kr-hash"]
 
